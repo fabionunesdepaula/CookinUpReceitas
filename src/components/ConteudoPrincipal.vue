@@ -1,4 +1,5 @@
 <script lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
 import MostrarReceitas from './MostrarReceitas.vue';
 import SelecionarIngredientes from './SelecionarIngredientes.vue';
 import Tag from './Tag.vue';
@@ -8,7 +9,8 @@ export default {
   data() {
     return {
       ingredientes: [] as string[],
-      conteudo: 'SelecionarIngredientes' as Pagina
+      conteudo: 'SelecionarIngredientes' as Pagina,
+      loadingTime: '' // Adicionado para armazenar o tempo de carregamento
     };
   },
   components: { SelecionarIngredientes, Tag, MostrarReceitas },
@@ -17,18 +19,32 @@ export default {
       this.ingredientes.push(ingrediente);
     },
     removerIngrediente(ingrediente: string) {
-    this.ingredientes = this.ingredientes.filter(iLista => ingrediente !== iLista);
+      this.ingredientes = this.ingredientes.filter(iLista => ingrediente !== iLista);
     },
     navegar(pagina: Pagina){
-      this.conteudo = pagina
-
+      this.conteudo = pagina;
     }
+  },
+  mounted() {
+    const calculateLoadingTime = () => {
+      const now = performance.now();
+      const [navigationEntry] = performance.getEntriesByType("navigation");
+      const loadTime = (now - navigationEntry.startTime) / 1000;
+      this.loadingTime = loadTime.toFixed(2); // Atualiza o estado do componente
+    };
+
+    window.addEventListener('load', calculateLoadingTime);
+
+    this.$once('hook:beforeDestroy', () => {
+      window.removeEventListener('load', calculateLoadingTime);
+    });
   }
 }
 </script>
 
 <template>
   <main class="conteudo-principal">
+    <div>Tempo de carregamento: {{ loadingTime }} segundo ⏱️</div> <!-- Elemento para exibir o tempo de carregamento -->
     <section>
         <span class="subtitulo-lg sua-lista-texto">
             Sua lista:
