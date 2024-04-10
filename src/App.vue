@@ -20,7 +20,7 @@ export default {
 .main-container {
   display: flex;
   flex-direction: column;
-  width: 99vw; /* A largura é a da viewport para evitar deslocamento */
+  width: 98vw; /* A largura é a da viewport para evitar deslocamento */
   margin-left: -10%; /* Remove qualquer margem padrão */
   padding: 0; /* Remove qualquer padding padrão */
   /*overflow-x: hidden; /* Previne rolagem horizontal indesejada */
