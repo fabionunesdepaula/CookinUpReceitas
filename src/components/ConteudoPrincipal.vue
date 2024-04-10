@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 .conteudo-principal {
-  width: 98vw; /* A largura é a da viewport para ocupar toda a largura da tela */
+  width: 95vw; /* A largura é a da viewport para ocupar toda a largura da tela */
   max-width: 98%;
   margin-left: 0.5vw;
   padding: 6.5rem 0.05rem; /* Remove padding lateral, mantendo vertical */
@@ -88,7 +88,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  //gap: 5rem;
 }
 
 /* Outros estilos permanecem inalterados */
