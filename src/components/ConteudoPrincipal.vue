@@ -44,7 +44,7 @@ export default {
 
 <template>
   <main class="conteudo-principal">
-    <div>Tempo de carregamento: {{ loadingTime }} segundo ⏱️</div>
+    <div class="time">Tempo de carregamento: {{ loadingTime }} segundo ⏱️</div>
     <section>
         <span class="subtitulo-lg sua-lista-texto">
             Sua lista:
@@ -90,6 +90,9 @@ export default {
   align-items: center;
   //gap: 5rem;
 }
+  .time{
+    font-weight: bold;
+  }
 
 /* Outros estilos permanecem inalterados */
 
