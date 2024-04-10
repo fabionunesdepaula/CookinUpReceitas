@@ -44,7 +44,7 @@ export default {
 
 <template>
   <main class="conteudo-principal">
-    <div>Tempo de carregamento: {{ loadingTime }} segundo ⏱️</div> <!-- Elemento para exibir o tempo de carregamento -->
+    <div>Tempo de carregamento: {{ loadingTime }} segundo ⏱️</div>
     <section>
         <span class="subtitulo-lg sua-lista-texto">
             Sua lista:
@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 .conteudo-principal {
-  width: 95vw; /* A largura é a da viewport para ocupar toda a largura da tela */
+  width: 100vw; /* A largura é a da viewport para ocupar toda a largura da tela */
   max-width: 98%;
   margin-left: 0.5vw;
   padding: 6.5rem 0.05rem; /* Remove padding lateral, mantendo vertical */
