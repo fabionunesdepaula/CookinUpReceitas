@@ -79,7 +79,6 @@ export default {
 .conteudo-principal {
   width: 100vw; /* A largura é a da viewport para ocupar toda a largura da tela */
   max-width: 98%;
-  margin-left: 6%; /* Garante que o conteúdo inicie do lado esquerdo */
   padding: 6.5rem 0.05rem; /* Remove padding lateral, mantendo vertical */
   border-radius: 3.75rem 3.75rem 0 0;
   background: var(--creme, #FFFAF3);
