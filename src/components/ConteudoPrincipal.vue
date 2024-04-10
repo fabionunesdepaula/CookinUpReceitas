@@ -78,6 +78,7 @@ export default {
 <style scoped>
 .conteudo-principal {
   width: 100vw; /* A largura é a da viewport para ocupar toda a largura da tela */
+  max-width: 98%;
   margin-left: 0.5vw;
   padding: 6.5rem 0.05rem; /* Remove padding lateral, mantendo vertical */
   border-radius: 3.75rem 3.75rem 0 0;
