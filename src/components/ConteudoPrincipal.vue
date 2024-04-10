@@ -91,7 +91,7 @@ export default {
   //gap: 5rem;
 }
   .time{
-    font-weight: bold;
+    margin-bottom: 2vh;
   }
 
 /* Outros estilos permanecem inalterados */
